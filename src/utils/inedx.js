@@ -47,20 +47,10 @@ export const getData = function (key) {
   }
 };
 
-/**
- * 获得认证 Token
- *
- * @return 认证 Token
- */
 export const getAuthToken = () => {
   return uni.getStorageSync("token");
 };
 
-/**
- * 解析URL
- *
- * @param {String} 字符串
- */
 export const parseUrl = (url) => {
   var pattern = /(\w+)=(\w+)/gi;
   var parames = {};
@@ -69,13 +59,6 @@ export const parseUrl = (url) => {
   });
   return parames;
 };
-
-/**
- * 校验参数
- *
- * @param {String} 字符串
- * @param {String}  数据的类型。例如说 mobile 手机号、tel 座机 TODO 芋艿：是否组件里解决
- */
 export const checkStr = (str, type) => {
   switch (type) {
     case "mobile": //手机号码
