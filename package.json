@@ -72,7 +72,7 @@
     "luch-request": "^3.0.7",
     "regenerator-runtime": "^0.12.1",
     "uview-ui": "^2.0.33",
-    "vue": "^2.7.4",
+    "vue": "^2.6.11",
     "vuex": "^3.2.0"
   },
   "devDependencies": {
@@ -97,7 +97,7 @@
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
     "sass": "^1.53.0",
-    "sass-loader": "^13.0.2",
+    "sass-loader": "^10.3.1",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
