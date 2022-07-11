@@ -9,7 +9,25 @@
     {
       "path": "views/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "首屏"
+      }
+    },
+    {
+      "path": "views/home/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "views/list/index",
+      "style": {
+        "navigationBarTitleText": "列表"
+      }
+    },
+    {
+      "path": "views/user/index",
+      "style": {
+        "navigationBarTitleText": "用户"
       }
     }
   ],
