@@ -3,11 +3,7 @@
 </template>
 
 <script>
-export default {
-  data() {},
-  onLoad() {},
-  methods: {},
-};
+export default {};
 </script>
 
 <style>
