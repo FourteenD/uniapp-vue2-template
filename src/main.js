@@ -1,8 +1,6 @@
 import Vue from "vue";
 import App from "./App";
-import plugin from "@/plugins";
-
-plugin.install(Vue);
+import "@/plugins";
 
 Vue.config.productionTip = true;
 

@@ -31,28 +31,14 @@ export const showMsg = (title, callBack) => {
     complete: callBack,
   });
 };
-/**
- * 它从本地存储中删除数据
- * @param key - 要删除的数据的键。
- */
 export const removeData = (key) => {
   try {
     uni.removeStorageSync(key);
   } catch (err) {}
 };
-/**
- * 它接受两个参数，一个键和一个值，然后在本地存储中设置键的值。
- * @param key - 存储数据的密钥。
- * @param val - 要存储的值。
- */
 export const setData = (key, val) => {
   uni.setStorageSync(key, val);
 };
-/**
- * 它尝试从存储中获取数据，如果失败，则返回 null。
- * @param key - 要获取的数据的key。
- * @returns 键的值。
- */
 export const getData = function (key) {
   try {
     return uni.getStorageSync(key);
@@ -60,12 +46,6 @@ export const getData = function (key) {
     return null;
   }
 };
-/**
- * 如果字符串与模式匹配，则返回 true，否则返回 false。
- * @param str - 要验证的字符串
- * @param type - mobile, tel, card, mobileCode, pwd, payPwd, postal, QQ, email, money, URL, IP, date,
- * number, english, chinese, lower, upper, HTML
- */
 export const checkStr = (str, type) => {
   switch (type) {
     case "mobile": //手机号码
@@ -117,4 +97,14 @@ export const checkStr = (str, type) => {
     default:
       return true;
   }
+};
+export const importModules = (path, regExp) => {
+  const modulesFiles = require.context(path, true, regExp);
+  const modules = modulesFiles.keys().reduce((modules, modulePath) => {
+    const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, "$1");
+    const value = modulesFiles(modulePath);
+    modules[moduleName] = value.default;
+    return modules;
+  }, {});
+  return modules;
 };

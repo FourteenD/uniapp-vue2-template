@@ -1,6 +1,6 @@
 const state = {
-  token: getToken(),
-  userInfo: getUserInfo(),
+  token: "",
+  userInfo: "",
 };
 
 const mutations = {
