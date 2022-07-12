@@ -1,5 +1,8 @@
 <template>
-  <view> 首屏 </view>
+  <view>
+    首屏
+    <u-button @click="skip">跳过</u-button>
+  </view>
 </template>
 
 <script>
