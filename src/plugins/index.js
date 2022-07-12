@@ -3,8 +3,8 @@ import store from "@/store";
 
 export default {
   install(Vue) {
-    Vue.prototype.$store = store;
     Vue.use(uView);
+    Vue.prototype.$store = store;
     uni.$u.setConfig({
       config: {
         unit: "rpx",
