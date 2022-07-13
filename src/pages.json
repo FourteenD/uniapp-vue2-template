@@ -7,24 +7,28 @@
   },
   "pages": [
     {
+      "name": "Index",
       "path": "views/index/index",
       "style": {
         "navigationBarTitleText": "首屏"
       }
     },
     {
+      "name": "Home",
       "path": "views/home/index",
       "style": {
         "navigationBarTitleText": "首页"
       }
     },
     {
+      "name": "List",
       "path": "views/list/index",
       "style": {
         "navigationBarTitleText": "列表"
       }
     },
     {
+      "name": "User",
       "path": "views/user/index",
       "style": {
         "navigationBarTitleText": "用户"

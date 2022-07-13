@@ -7,7 +7,7 @@ module.exports = {
       new webpack.DefinePlugin({
         ROUTES: webpack.DefinePlugin.runtimeValue(() => {
           const tfPages = new TransformPages({
-            includes: ["path", "name", "meta"],
+            includes: ["path", "name", "meta", "aliasPath"],
           });
           return JSON.stringify(tfPages.routes);
         }, true),
