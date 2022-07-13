@@ -8,3 +8,5 @@ uni-app Vue2工程脚手架
 - [ ] ESLine
 - [ ] prettier
 - [ ] typescript
+- [ ] 自动路由引入
+- [ ] 工具完善

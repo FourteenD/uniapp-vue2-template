@@ -24,5 +24,6 @@ export default {
   onThemeChange() {
     console.log("App onThemeChange");
   },
+  methods: {},
 };
 </script>
