@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App";
 
-import mixin from "./common/mixin";
+import mixin from "./common/mixin.js";
 
 // vuex
 import store from "./store";
