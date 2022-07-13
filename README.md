@@ -7,3 +7,6 @@ uni-app Vue2工程脚手架
 - [ ] request
 - [ ] store
 - [X] plop
+- [ ] mock
+- [ ] ESLine
+- [ ] prettier
