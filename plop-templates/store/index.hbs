@@ -3,7 +3,17 @@ const state = {}
 {{/if}}
 
 {{#if mutations}}
-const mutations = {}
+const mutations = {
+  setStateAttr(state, param) {
+    if (param instanceof Array) {
+      for (let item of param) {
+        state[item.key] = item.val;
+      }
+    } else {
+      state[param.key] = param.val;
+    }
+  },
+}
 {{/if}}
 
 {{#if actions}}
