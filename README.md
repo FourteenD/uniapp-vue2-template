@@ -1,11 +1,9 @@
 uni-app Vue2工程脚手架
 
-- [ ] vue-router
+- [ ] uni-simple-router
+
+  - [X] 支持
+  - [ ] 路由自动引入
 - [ ] request
 - [ ] store
-- [ ] pulugin
-- [ ] styles
-- [ ] utils
-- [ ] directive
-- [ ] common
-- [ ] api
+- [X] plop
