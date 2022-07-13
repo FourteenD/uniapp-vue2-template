@@ -98,13 +98,3 @@ export const checkStr = (str, type) => {
       return true;
   }
 };
-export const importModules = (path, regExp) => {
-  const modulesFiles = require.context(path, true, regExp);
-  const modules = modulesFiles.keys().reduce((modules, modulePath) => {
-    const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, "$1");
-    const value = modulesFiles(modulePath);
-    modules[moduleName] = value.default;
-    return modules;
-  }, {});
-  return modules;
-};
