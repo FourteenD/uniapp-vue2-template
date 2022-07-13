@@ -1,10 +1,27 @@
 <template>
-  <view> 列表 </view>
+  <view>
+    List
+  </view>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'List',
+  props: {},
+  data() {
+    return {};
+  },
+  created() { },
+  onLoad() { },
+  mounted() { },
+  onShow() { },
+  onHide() { },
+  onPullDownRefresh() { },
+  onReachBottom() { },
+  methods: {},
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 </style>

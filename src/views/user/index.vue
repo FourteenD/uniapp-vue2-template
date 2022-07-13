@@ -1,10 +1,27 @@
 <template>
-  <view> 用户 </view>
+  <view>
+    User
+  </view>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'User',
+  props: {},
+  data() {
+    return {};
+  },
+  created() { },
+  onLoad() { },
+  mounted() { },
+  onShow() { },
+  onHide() { },
+  onPullDownRefresh() { },
+  onReachBottom() { },
+  methods: {},
+};
 </script>
 
-<style>
+<style lang="scss" scoped>
+
 </style>
