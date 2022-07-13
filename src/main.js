@@ -5,6 +5,7 @@ import App from "./App";
 import store from "./store";
 Vue.prototype.$store = store;
 
+// vue-simple-router
 import { router, RouterMount } from "./router";
 Vue.use(router);
 

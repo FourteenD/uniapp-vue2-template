@@ -1,28 +1,19 @@
-{{#if template}}
 <template>
-  <view>
-
-  </view>
+  <view> Hello World ! </view>
 </template>
-{{/if}}
 
-{{#if script}}
 <script>
 export default {
-  name: '{{ properCase name }}',
+  name: "Hello",
   props: {},
   data() {
-    return {}
+    return {};
   },
   created() {},
   mounted() {},
-  methods: {}
-}
+  methods: {},
+};
 </script>
-{{/if}}
 
-{{#if style}}
 <style lang="scss" scoped>
-
 </style>
-{{/if}}
