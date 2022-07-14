@@ -33,13 +33,15 @@ export const showMsg = (title, callBack) => {
 };
 export const removeData = (key) => {
   try {
-    uni.removeStorageSync(key);
-  } catch (err) {}
+    return uni.removeStorageSync(key);
+  } catch (err) {
+    return null;
+  }
 };
 export const setData = (key, val) => {
   uni.setStorageSync(key, val);
 };
-export const getData = function (key) {
+export const getData = (key) => {
   try {
     return uni.getStorageSync(key);
   } catch (err) {
