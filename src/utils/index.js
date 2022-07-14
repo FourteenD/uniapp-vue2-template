@@ -74,11 +74,6 @@ export const checkStr = (str, type) => {
       return /(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/.test(str);
     case 'IP': // IP
       return /((?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d))/.test(str);
-    case 'date': // 日期时间
-      return (
-        /^(\d{4})\-(\d{2})\-(\d{2}) (\d{2})(?:\:\d{2}|:(\d{2}):(\d{2}))$/.test(str) ||
-        /^(\d{4})\-(\d{2})\-(\d{2})$/.test(str)
-      );
     case 'number': // 数字
       return /^[0-9]$/.test(str);
     case 'english': // 英文

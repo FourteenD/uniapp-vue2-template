@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [...ROUTES],
 });
 
-//全局路由前置守卫
+// 全局路由前置守卫
 router.beforeEach((to, from, next) => {
   console.log('路由信息:', {
     to,

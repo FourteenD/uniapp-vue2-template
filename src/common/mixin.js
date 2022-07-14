@@ -52,19 +52,19 @@ export default {
      * @param {Boolean} options.login 是否检测登录
      */
     navTo(url, options = {}) {
-      this.$util.throttle(() => {
-        if (!url) {
-          return;
-        }
-        // 如果需要登陆，并且未登陆，则跳转到登陆界面
-        if ((~url.indexOf('login=1') || options.login) && !this.$store.getters.hasLogin) {
-          url = '/pages/auth/login';
-        }
-        // 跳转到指定 url 地址
-        uni.navigateTo({
-          url,
-        });
-      }, 300);
+      // this.$util.throttle(() => {
+      //   if (!url) {
+      //     return;
+      //   }
+      //   // 如果需要登陆，并且未登陆，则跳转到登陆界面
+      //   if ((~url.indexOf('login=1') || options.login) && !this.$store.getters.hasLogin) {
+      //     url = '/pages/auth/login';
+      //   }
+      //   // 跳转到指定 url 地址
+      //   uni.navigateTo({
+      //     url,
+      //   });
+      // }, 300);
     },
 
     /**
@@ -78,32 +78,32 @@ export default {
      * @param {Boolean} ext.login 未登录拦截
      * @param {Boolean} ext.setLoaded 加载完成是设置页面加载完毕
      */
-    $request(module, operation, data = {}, ext = {}) {
-      if (ext.login && !this.$util.isLogin()) {
-        return;
-      }
-      if (ext.showLoading) {
-        this.isLoading = true;
-      }
-      return new Promise((resolve, reject) => {
-        request(module, operation, data, ext)
-          .then((result) => {
-            if (ext.hideLoading !== false) {
-              this.isLoading = false;
-            }
-            setTimeout(() => {
-              if (this.setLoaded !== false) {
-                this.loaded = true;
-              }
-            }, 100);
-            this.$refs.confirmBtn && this.$refs.confirmBtn.stop();
-            resolve(result);
-          })
-          .catch((err) => {
-            reject(err);
-          });
-      });
-    },
+    // $request(module, operation, data = {}, ext = {}) {
+    // if (ext.login && !this.$util.isLogin()) {
+    //   return;
+    // }
+    // if (ext.showLoading) {
+    //   this.isLoading = true;
+    // }
+    // return new Promise((resolve, reject) => {
+    //   request(module, operation, data, ext)
+    //     .then((result) => {
+    //       if (ext.hideLoading !== false) {
+    //         this.isLoading = false;
+    //       }
+    //       setTimeout(() => {
+    //         if (this.setLoaded !== false) {
+    //           this.loaded = true;
+    //         }
+    //       }, 100);
+    //       this.$refs.confirmBtn && this.$refs.confirmBtn.stop();
+    //       resolve(result);
+    //     })
+    //     .catch((err) => {
+    //       reject(err);
+    //     });
+    // });
+    // },
     imageOnLoad(data, key) {
       // TODO 芋艿：需要改成自己的
       setTimeout(() => {

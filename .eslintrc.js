@@ -8,6 +8,7 @@ module.exports = {
     uni: 'readonly',
     plus: 'readonly',
     wx: 'readonly',
+    ROUTES: 'readonly',
   },
   extends: ['alloy', 'alloy/vue'],
   parserOptions: {
