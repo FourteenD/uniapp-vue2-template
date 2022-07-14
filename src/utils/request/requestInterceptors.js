@@ -13,7 +13,7 @@ module.exports = (vm) => {
       return config;
     },
     (
-      config, // 可使用async await 做异步操作
-    ) => Promise.reject(config),
+      config // 可使用async await 做异步操作
+    ) => Promise.reject(config)
   );
 };
