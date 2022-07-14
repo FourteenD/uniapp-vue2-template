@@ -11,8 +11,6 @@ module.exports = {
     ROUTES: 'readonly',
   },
   extends: ['alloy', 'alloy/vue'],
-  parserOptions: {
-    ecmaVersion: 'latest',
-  },
+  parser: 'babel-eslint',
   rules: {},
 };

@@ -1,5 +1,5 @@
 <template>
-  <view @click="$Router.push({ name: 'Index' })"> User </view>
+  <view @click="$Router.push({ name: 'Index' })">User</view>
 </template>
 
 <script>
