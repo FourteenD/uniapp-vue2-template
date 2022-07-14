@@ -5,6 +5,7 @@
   "scripts": {
     "plop": "plop",
     "dev": "npm run dev:mp-weixin",
+    "prettier":"npx prettier --write .",
     "build": "npm run build:mp-weixin",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
@@ -99,6 +100,7 @@
     "miniprogram-api-typings": "*",
     "plop": "^3.1.1",
     "postcss-comment": "^2.0.0",
+    "prettier": "^2.7.1",
     "sass": "^1.53.0",
     "sass-loader": "^10.3.1",
     "uni-read-pages": "^1.0.5",

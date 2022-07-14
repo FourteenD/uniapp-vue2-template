@@ -1,0 +1,10 @@
+node_modules
+unpackage
+js_sdk
+uni_modules
+uniCloud-aliyun
+.vscode
+.hbuilderx
+*.html
+*.json
+uview
