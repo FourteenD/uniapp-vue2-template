@@ -28,6 +28,6 @@ module.exports = (vm) => {
     (response) => {
       /*  对响应错误做点什么 （statusCode !== 200）*/
       return Promise.reject(response);
-    }
+    },
   );
 };

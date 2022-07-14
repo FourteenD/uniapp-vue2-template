@@ -57,10 +57,7 @@ export default {
           return;
         }
         // 如果需要登陆，并且未登陆，则跳转到登陆界面
-        if (
-          (~url.indexOf("login=1") || options.login) &&
-          !this.$store.getters.hasLogin
-        ) {
+        if ((~url.indexOf("login=1") || options.login) && !this.$store.getters.hasLogin) {
           url = "/pages/auth/login";
         }
         // 跳转到指定 url 地址

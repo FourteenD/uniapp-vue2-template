@@ -1,4 +1,4 @@
-const state = {}
+const state = {};
 
 const mutations = {
   setStateAttr(state, param) {
@@ -10,13 +10,13 @@ const mutations = {
       state[param.key] = param.val;
     }
   },
-}
+};
 
-const actions = {}
+const actions = {};
 
 export default {
   namespaced: true,
   state,
   mutations,
-  actions
-}
+  actions,
+};
