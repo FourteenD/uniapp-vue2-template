@@ -9,10 +9,9 @@ module.exports = {
     plus: 'readonly',
     wx: 'readonly',
   },
-  extends: ['plugin:vue/vue3-essential', 'airbnb-base'],
+  extends: ['alloy', 'alloy/vue'],
   parserOptions: {
     ecmaVersion: 'latest',
   },
-  plugins: ['vue'],
   rules: {},
 };
