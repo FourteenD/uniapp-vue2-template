@@ -1,6 +1,10 @@
 import Vue from "vue";
 import App from "./App";
 
+Vue.config.productionTip = true;
+
+App.mpType = "app";
+
 // vuex
 import store from "./store";
 Vue.prototype.$store = store;
@@ -8,10 +12,6 @@ Vue.prototype.$store = store;
 // vue-simple-router
 import { router, RouterMount } from "./router";
 Vue.use(router);
-
-Vue.config.productionTip = true;
-
-App.mpType = "app";
 
 // 引入全局uView
 import uView from "uview-ui";
@@ -38,5 +38,5 @@ RouterMount(app, router, "#app");
 // #endif
 
 // #ifndef H5
-app.$mount(); //为了兼容小程序及app端必须这样写才有效果
+app.$mount();
 // #endif
