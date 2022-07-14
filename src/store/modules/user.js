@@ -1,6 +1,6 @@
 const state = {
-  token: "",
-  userInfo: "",
+  token: '',
+  userInfo: '',
 };
 
 const mutations = {
@@ -22,7 +22,7 @@ const actions = {
       login({ username: username.trim(), password: password })
         .then((response) => {
           const { data } = response;
-          commit("SET_TOKEN", data.token);
+          commit('SET_TOKEN', data.token);
           resolve();
         })
         .catch((error) => {
@@ -38,20 +38,20 @@ const actions = {
           const { data } = response;
 
           if (!data) {
-            reject("Verification failed, please Login again.");
+            reject('Verification failed, please Login again.');
           }
 
           const { roles, name, avatar, introduction, route } = data;
 
           if (!roles || roles.length <= 0) {
-            reject("getInfo: roles must be a non-null array!");
+            reject('getInfo: roles must be a non-null array!');
           }
 
-          commit("SET_ROLES", roles);
-          commit("SET_NAME", name);
-          commit("SET_AVATAR", avatar);
-          commit("SET_INTRODUCTION", introduction);
-          commit("SET_ROUTE", filterAsyncRouter(route));
+          commit('SET_ROLES', roles);
+          commit('SET_NAME', name);
+          commit('SET_AVATAR', avatar);
+          commit('SET_INTRODUCTION', introduction);
+          commit('SET_ROUTE', filterAsyncRouter(route));
           resolve(data);
         })
         .catch((error) => {
@@ -64,11 +64,11 @@ const actions = {
     return new Promise((resolve, reject) => {
       logout(state.token)
         .then(() => {
-          commit("SET_TOKEN", "");
-          commit("SET_ROLES", []);
+          commit('SET_TOKEN', '');
+          commit('SET_ROLES', []);
           removeToken();
           resetRouter();
-          dispatch("tagsView/delAllViews", null, { root: true });
+          dispatch('tagsView/delAllViews', null, { root: true });
           resolve();
         })
         .catch((error) => {
@@ -79,8 +79,8 @@ const actions = {
 
   resetToken({ commit }) {
     return new Promise((resolve) => {
-      commit("SET_TOKEN", "");
-      commit("SET_ROLES", []);
+      commit('SET_TOKEN', '');
+      commit('SET_ROLES', []);
       removeToken();
       resolve();
     });
